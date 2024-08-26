@@ -1,0 +1,38 @@
+   /* Navbar styles */
+   .navbar {
+    background-color: #343a40; /* Dark background */
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Larger brand text */
+}
+
+.nav-link {
+    font-size: 1.1rem; /* Slightly larger font size for links */
+}
+
+.nav-link:hover {
+    color: #00c853 !important; /* Green color on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.nav-link.active {
+    color: #00c853 !important; /* Green color for active link */
+    font-weight: bold; /* Bold text for active link */
+}
+
+.nav-item i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.navbar-toggler {
+    border-color: #00c853; /* Green color for the toggler border */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%2300c853" viewBox="0 0 16 16"><path d="M0 1.5A.5.5 0 0 1 .5 1h15a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-.5.5H.5A.5.5 0 0 1 0 14V1.5zM1 2v12h14V2H1z"/></svg>');
+}
+.collapse{
+    margin-left: 32%;
+}

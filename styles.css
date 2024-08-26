@@ -1,0 +1,142 @@
+/* Custom Navbar Styles */
+.navbar {
+    background-color: #008000; /* Teal color */
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar-nav {
+    margin-left: auto; /* Align menu items to the left */
+}
+.nav-link {
+    color: #ffffff !important; /* White text color */
+    padding: 0.75rem 1rem; /* Adjust padding as needed */
+}
+.nav-link:hover {
+    background-color: #004d4d; /* Darker teal on hover */
+    border-radius: 0.25rem;
+}
+.navbar-toggler {
+    border-color: #ffffff; /* White border for the toggler */
+}
+.navbar-toggler-icon {
+    background-image: url('path/to/your/hamburger-icon.png'); /* Optional: Custom icon */
+}
+.navbar-brand img {
+    height: 40px; /* Adjust logo height */
+    margin-right: 1rem; /* Space between logo and text */
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.card-body {
+    position: relative;
+    padding: 1.25rem;
+}
+.card-body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+.card-body:hover::after {
+    width: 50%;
+}
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.btn-primary {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-primary:hover {
+    background-color: #004494;
+    border-color: #003d79;
+}
+.footer-bg {
+    background-color: #343a40;
+}
+.hero {
+    position: relative;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+.footer-bg {
+    background: linear-gradient(135deg, #128617 0%, #198d15 100%);
+}
+
+.footer-bg .social-media a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-bg .social-media a:hover {
+    color: #007bff;
+}
+
+.footer-bg .social-media .btn {
+    border: 1px solid #ffffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin: 5px;
+}
+
+.footer-bg .social-media .btn i {
+    margin-right: 5px;
+}
+.p{
+   color: #ffffff;
+}
+.footer-bg {
+    background-color: #343a40;
+    color: white;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+.bi{
+size: 10%;
+}
+.logo-container .logo {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.logo-container .logo i {
+    font-size: 3rem; /* Increase the size of the icon */
+    margin-right: 15px; /* Add spacing between the icon and the text */
+    color: green; /* Set the icon color to green */
+}
+
+.logo-container .logo-title {
+    font-size: 1.25rem; /* Adjust the text size if needed */
+    color: green; /* Set the text color to green */
+}
