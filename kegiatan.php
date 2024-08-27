@@ -83,11 +83,11 @@ if (!$settings) {
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="jk.png" alt="Logo"> <!-- Add your logo image path here -->
-                Kejaksaan Negeri
+
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -133,7 +133,7 @@ if (!$settings) {
         </div>
     </div>
 
-    <footer class="footer-bg text-center py-2 fixed-bottom">
+    <footer class="footer-bg text-center py-2">
         <div class="container">
             <!-- Main Footer Content -->
             <!-- Social Media Icons -->
