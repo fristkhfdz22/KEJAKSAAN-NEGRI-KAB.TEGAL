@@ -32,7 +32,7 @@ if (!$settings) {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="jk.png" alt="Logo"> <!-- Add your logo image path here -->

@@ -45,7 +45,7 @@ if (!$settings) {
    
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark ">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="jk.png" alt="Logo" > <!-- Add your logo image path here -->
@@ -105,7 +105,7 @@ if (!$settings) {
     }
     ?>
 </div>
-<footer class="footer-bg text-center py-2">
+<footer class="footer-bg text-center py-2 fixed-bottom">
     <div class="container">
         <!-- Main Footer Content -->
         <!-- Social Media Icons -->
