@@ -81,7 +81,7 @@ if (!$settings) {
             <?php endforeach; ?>
         </div>
     </div>
-    <footer class="footer-bg text-center py-2 fixed-bottom">
+    <footer class="footer-bg text-center py-2 ">
         <div class="container">
             <!-- Main Footer Content -->
            

@@ -79,7 +79,7 @@ if (!$settings) {
             <p>Berita tidak ditemukan.</p>
         <?php endif; ?>
     </div>
-    <footer class="footer-bg text-center py-2 fixed-bottom">
+    <footer class="footer-bg text-center py-2 ">
         <div class="container">
             <!-- Main Footer Content -->
            
