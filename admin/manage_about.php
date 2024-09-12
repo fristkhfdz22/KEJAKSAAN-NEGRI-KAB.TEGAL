@@ -6,7 +6,6 @@ if (!isset($_SESSION['admin'])) {
 }
 include('../config.php');
 
-// Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $about_text = $_POST['about_text'];
     $vision = $_POST['vision'];
@@ -15,8 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = $pdo->prepare("REPLACE INTO about (id, about_text, vision, mission) VALUES (1, ?, ?, ?)");
     $stmt->execute([$about_text, $vision, $mission]);
 }
-
-// Fetch current content
 $stmt = $pdo->query("SELECT * FROM about WHERE id = 1");
 $about_content = $stmt->fetch();
 ?>

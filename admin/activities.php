@@ -1,7 +1,5 @@
 <?php
 include('../config.php');
-
-// Handle delete request
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
     $stmt = $pdo->prepare("DELETE FROM activities WHERE id = ?");
@@ -10,7 +8,6 @@ if (isset($_GET['delete'])) {
     exit();
 }
 
-// Handle add or update request
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -18,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = isset($_POST['id']) ? $_POST['id'] : null;
 
     if ($id) {
-        // Update existing activity
+ 
         $stmt = $pdo->prepare("UPDATE activities SET title = ?, description = ?, activity_date = ? WHERE id = ?");
         $stmt->execute([$title, $description, $date, $id]);
     } else {
-        // Add new activity
+
         $stmt = $pdo->prepare("INSERT INTO activities (title, description, activity_date) VALUES (?, ?, ?)");
         $stmt->execute([$title, $description, $date]);
     }
@@ -31,10 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     exit();
 }
 
-// Fetch all activities
 $activities = $pdo->query("SELECT * FROM activities ORDER BY activity_date DESC")->fetchAll(PDO::FETCH_ASSOC);
 
-// Fetch single activity for editing if an ID is set
 $editActivity = null;
 if (isset($_GET['edit'])) {
     $id = $_GET['edit'];

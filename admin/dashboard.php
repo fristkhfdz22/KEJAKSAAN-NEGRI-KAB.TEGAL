@@ -1,5 +1,5 @@
 <?php
-session_start(); // Pastikan ini hanya dipanggil sekali
+session_start();
 if (!isset($_SESSION['admin'])) {
     header("Location: index.php");
     exit;

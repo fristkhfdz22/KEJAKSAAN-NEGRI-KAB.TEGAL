@@ -2,21 +2,19 @@
 include('config.php');
 $stmt = $pdo->query("SELECT * FROM about WHERE id = 1");
 $about_content = $stmt->fetch();
-// Fetch settings data
 try {
     $query = $pdo->query("SELECT * FROM settings LIMIT 1");
     $settings = $query->fetch(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     die("Query failed: " . $e->getMessage());
 }
-
-// Fetch activities from the last week
+//$one_week_ago = date('Y-m-d', strtotime(''));
+//$activities_query = $pdo->prepare("SELECT * FROM activities WHERE activity_date >= ? ORDER BY activity_date DESC");
+//$activities_query->execute([$one_week_ago]);
 $one_week_ago = date('Y-m-d', strtotime('-1 week'));
 $activities_query = $pdo->prepare("SELECT * FROM activities WHERE activity_date >= ? ORDER BY activity_date DESC");
 $activities_query->execute([$one_week_ago]);
 $activities = $activities_query->fetchAll(PDO::FETCH_ASSOC);
-
-// Fallback for settings
 if (!$settings) {
     $settings = [
         'address' => 'Alamat tidak tersedia',
@@ -42,35 +40,34 @@ if (!$settings) {
 <style>
 .logo-container {
     display: flex;
-    justify-content: space-around; /* Space out the items */
-    align-items: center; /* Center items vertically */
-    background-color: #d4edda; /* Light green background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Space around the content */
-    margin-top: 20px; /* Space above the container */
+    justify-content: space-around; 
+    align-items: center; 
+    background-color: #d4edda; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-top: 20px; 
 }
 
-/* Style for each logo item */
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #155724; /* Dark green color for text */
+    color: #155724; 
 }
 
 .logo i {
-    font-size: 4rem; /* 2x larger than default Bootstrap size */
-    margin-right: 10px; /* Space between icon and text */
+    font-size: 4rem; 
+    margin-right: 10px; 
 }
 
 .logo-title {
-    font-size: 1.5rem; /* Adjust font size as needed */
+    font-size: 1.5rem; 
 }
     </style>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="jk.png" alt="Logo"> <!-- Add your logo image path here -->
+                <img src="jk.png" alt="Logo"> 
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -146,9 +143,6 @@ if (!$settings) {
     </div>
     <footer class="footer-bg text-center py-2 ">
         <div class="container">
-            <!-- Main Footer Content -->
-           
-            <!-- Social Media Icons -->
             <div class="social-media">
                 <p class="mb-1">Alamat: <?php echo htmlspecialchars($settings['address']); ?></p>
                 <a href="<?php echo htmlspecialchars($settings['facebook_url']); ?>" target="_blank" class="btn btn-outline-light">

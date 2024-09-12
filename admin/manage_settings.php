@@ -19,6 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $facebook_url = $_POST['facebook_url'];
     $twitter_url = $_POST['twitter_url'];
     $instagram_url = $_POST['instagram_url'];
+    //$facebook_url = $_POST['facebook_url'];
+    //$twitter_url = $_POST['twitter_url'];
+    //$instagram_url = $_POST['instagram_url'];
 
     try {
         $stmt = $pdo->prepare("UPDATE settings SET address = ?, facebook_url = ?, twitter_url = ?, instagram_url = ? WHERE id = 1");

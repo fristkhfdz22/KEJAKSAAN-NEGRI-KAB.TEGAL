@@ -2,7 +2,6 @@
 include('config.php');
 $stmt = $pdo->query("SELECT * FROM about WHERE id = 1");
 $about_content = $stmt->fetch();
-// Fetch settings data
 
 try {
     $query = $pdo->query("SELECT * FROM settings LIMIT 1");
@@ -11,7 +10,7 @@ try {
     die("Query failed: " . $e->getMessage());
 }
 
-// Fallback for settings
+
 if (!$settings) {
     $settings = [
         'address' => 'Alamat tidak tersedia',
@@ -37,7 +36,7 @@ if (!$settings) {
 <nav class="navbar navbar-expand-lg navbar-dark navbar-bg-dark fixed-top mb-4">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="jk.png" alt="Logo"> <!-- Add your logo image path here -->
+                <img src="jk.png" alt="Logo">
             
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,11 +88,9 @@ if (!$settings) {
             <?php endforeach; ?>
         </div>
     </div>
-    <footer class="footer-bg text-center py-2 ">
+    <footer class="footer-bg text-center py-2 fixed-bottom">
         <div class="container">
-            <!-- Main Footer Content -->
-           
-            <!-- Social Media Icons -->
+
             <div class="social-media">
             <p class="mb-1">Alamat: <?php echo htmlspecialchars($settings['address']); ?></p>
                 <a href="<?php echo htmlspecialchars($settings['facebook_url']); ?>" target="_blank" class="btn btn-outline-light">

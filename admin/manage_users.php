@@ -24,6 +24,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$username, $password]);
     }
 }
+//if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//if (isset($_POST['delete_user'])) {
+    //$id = $_POST['user_id'];
+       // $stmt = $pdo->prepare("DELETE FROM users WHERE id = ?");
+        //$stmt->execute([$id]);
+    //} elseif (isset($_POST['update_user'])) {
+       // $id = $_POST['user_id'];
+        //$username = $_POST['username'];
+        //$password = $_POST['password'];
+        //$stmt = $pdo->prepare("UPDATE users SET username = ?, password = ? WHERE id = ?");
+        //$stmt->execute([$username, $password, $id]);
+    //} elseif (isset($_POST['add_user'])) {
+      //  $username = $_POST['username'];
+      //  $password = $_POST['password'];
+     // $stmt = $pdo->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+      //  $stmt->execute([$username, $password]);
+   // }//
+//}
 ?>
 
 <!DOCTYPE html>

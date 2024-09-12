@@ -91,11 +91,9 @@ if (!$settings) {
     </div>
 </div>
 
-    <footer class="footer-bg text-center py-2 ">
+    <footer class="footer-bg text-center py-2 fixed-bottom">
         <div class="container">
-            <!-- Main Footer Content -->
-           
-            <!-- Social Media Icons -->
+
             <div class="social-media">
             <p class="mb-1">Alamat: <?php echo htmlspecialchars($settings['address']); ?></p>
                 <a href="<?php echo htmlspecialchars($settings['facebook_url']); ?>" target="_blank" class="btn btn-outline-light">

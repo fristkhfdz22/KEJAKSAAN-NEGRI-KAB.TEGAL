@@ -1,7 +1,7 @@
 <?php
 include('config.php');
 
-// Fetch activities from the last week
+
 $one_week_ago = date('Y-m-d', strtotime('-1 week'));
 
 try {
@@ -9,11 +9,11 @@ try {
     $activities_query->execute([$one_week_ago]);
     $activities = $activities_query->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
-    // Handle the error appropriately
+    
     die("Query failed: " . $e->getMessage());
 }
 
-// Fallback in case of no activities
+
 if (!$activities) {
     $activities = [];
 }
@@ -133,10 +133,9 @@ if (!$settings) {
         </div>
     </div>
 
-    <footer class="footer-bg text-center py-2 ">
+    <footer class="footer-bg text-center py-2 fixed-bottom">
         <div class="container">
-            <!-- Main Footer Content -->
-            <!-- Social Media Icons -->
+
             <div class="social-media">
                 <p class="mb-1">Alamat: <?php echo htmlspecialchars($settings['address']); ?></p>
                 <a href="<?php echo htmlspecialchars($settings['facebook_url']); ?>" target="_blank" class="btn btn-outline-light">

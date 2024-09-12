@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $db = 'kejaksaan_negri';
-$user = 'root'; // atau username database Anda
-$pass = ''; // atau password database Anda
+$user = 'root';
+$pass = ''; 
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
