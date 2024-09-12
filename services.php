@@ -29,6 +29,8 @@ if (!$settings) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layanan Kami</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -80,8 +82,9 @@ if (!$settings) {
             <?php endforeach; ?>
         </div>
     </div>
-    <footer class="footer-bg text-center py-2 fixed-bottom ">
+    <footer class="footer-bg text-center py-2 fixed-bottom">
         <div class="container">
+
             <div class="social-media">
             <p class="mb-1">Alamat: <?php echo htmlspecialchars($settings['address']); ?></p>
                 <a href="<?php echo htmlspecialchars($settings['facebook_url']); ?>" target="_blank" class="btn btn-outline-light">

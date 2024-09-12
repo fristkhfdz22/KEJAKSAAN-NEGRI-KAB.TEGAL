@@ -45,27 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-    <?php
- 
-    include('../config.php');
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        $stmt = $pdo->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
-        $stmt->execute([$username, $password]);
-        $user = $stmt->fetch();
-
-        if ($user) {
-            $_SESSION['admin'] = $user['username'];
-            header("Location: dashboard.php");
-            exit;
-        } else {
-            echo "<div class='alert alert-danger text-center mt-4'>Login gagal. Username atau password salah.</div>";
-        }
-    }
-    ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
